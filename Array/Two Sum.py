@@ -26,8 +26,18 @@ Constraints:
 -10^9 <= nums[i] <= 10^9
 -10^9 <= target <= 10^9
 """
+# Solution 1 : Efficient Solution using HashTable
+def twoSum(self, nums, target):
+        hash_map = {}
 
-# Solution 
+        for i in range(len(nums)):
+            complement = target - nums[i]
+            if complement in hash_map:
+                return hash_map[complement],i
+            hash_map[nums[i]] = i
+
+
+# Solution 2 : Brute force with Time Complexity O(n2)
 def twoSum(nums,target):
     N = len(nums)-1
     for i in range(0,N):
