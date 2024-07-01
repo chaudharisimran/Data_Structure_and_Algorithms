@@ -37,11 +37,23 @@ def threeConsecutiveOdds(arr):
                 count = 0
 
         return False
-        
+
+# Second Way for doing same
+def threeConsecutiveOdds_2(arr):
+       
+        N = len(arr) - 2
+
+        for i in range(N):
+            if arr[i] % 2 == 1 and arr[i+1] % 2 == 1 and arr[i+2] % 2 == 1:
+                print("True")
+                return True
+
+        return False
     
 ## Test Solution
 input_list = [1,2,34,3,4,5,7,23,12]
 threeConsecutiveOdds(input_list)
+#threeConsecutiveOdds_2(input_list)
     
 ## Test 2
 # arr = [2,6,4,1]
