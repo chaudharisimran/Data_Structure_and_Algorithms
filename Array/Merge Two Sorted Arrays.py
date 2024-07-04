@@ -70,7 +70,7 @@ def findMedianSortedArrays(nums1, nums2):
             # odd 
             median = merged_array[(merge_array_len-1)//2]
             print(median)
-            return merged_array[(merge_array_len-1)//2]
+            return median
     
 # Test Solution
 nums1 = [1,3]
